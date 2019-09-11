@@ -57,9 +57,10 @@ ListMenu = function(menu)
     listvehicle.SubMenu.OnItemSelect = function(_,_,Index)
         for i = 1 , #VehiclesBDD, 1 do
             TriggerServerEvent('esx_eden_mrv_garage:modifyStored', VehiclesBDD[Index].plate, 0)
-            SpawnVehicle(VehiclesBDD[Index].vehicle)
-            _garagepool:CloseAllMenus()
         end
+
+        SpawnVehicle(VehiclesBDD[Index].vehicle)
+        _garagepool:CloseAllMenus()
     end
 
     menu.OnMenuClosed = function()
@@ -81,9 +82,10 @@ ParkMenu = function(menu)
             for i = 1, #VehiclesNoStoredBDD do
                 TriggerServerEvent('esx_eden_mrv_garage:modifyStored', VehiclesNoStoredBDD[Index].plate, 1)
                 TriggerServerEvent('esx_eden_mrv_garage:saveCustoms', vehicleProps)
-                Ranger(vehicle, vehicleProps)
-                _garagepool:CloseAllMenus()
             end
+
+            Ranger(vehicle, vehicleProps)
+            _garagepool:CloseAllMenus()
         else
             _garagepool:CloseAllMenus()
             ESX.ShowNotification(_U"none_vehicle")
