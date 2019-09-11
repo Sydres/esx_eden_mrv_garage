@@ -119,7 +119,7 @@ PoundMenu = function(menu)
                 print(price)
                 TriggerServerEvent('esx_eden_mrv_garage:pay', price)
                 ESX.ShowNotification(_U"you_paid"..price)
-                TriggerServerEvent('esx_eden_mrv_garage:modifyInPound', PoundVehiclesBDD[index].plate, 0)
+                TriggerServerEvent('esx_eden_mrv_garage:modifyImPound', PoundVehiclesBDD[index].plate, 0)
                 SpawnPoundedVehicle(PoundVehiclesBDD[index])
                 TriggerServerEvent('esx_eden_mrv_garage:modifyStored', PoundVehiclesBDD[index].plate, 0)
             else
