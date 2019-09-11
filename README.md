@@ -1,5 +1,5 @@
 ![preview 1](https://imgur.com/yBcWr8Y.png)
-![preview 2](https://imgur.com/CHH7IoE.png)
+![preview 2](https://imgur.com/ZoaSLq4.png)
 
 # As I no longer use esx, I decided to publish my modification of esx_eden_garage in NativeUILua_Reloaded.
 
