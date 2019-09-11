@@ -1,5 +1,5 @@
-﻿![inpound](https://imgur.com/Dv7wdbd)
-![garage](https://imgur.com/CHH7IoE)
+https://imgur.com/Dv7wdbd
+https://imgur.com/CHH7IoE
 
 # As I no longer use esx, I decided to publish my modification of esx_eden_garage in NativeUILua_Reloaded.
 
