@@ -103,7 +103,7 @@ PoundMenu = function(menu)
     for i = 1, #PoundVehiclesBDD, 1 do
         local vehicleName = GetDisplayNameFromVehicleModel(PoundVehiclesBDD[i].model)
         
-        poundvehicleitem = NativeUI.CreateItem(vehicleName, "")
+        poundvehicleitem = NativeUI.CreateItem(GetLabelText(vehicleName), "")
 
         poundmenu.SubMenu:AddItem(poundvehicleitem)
 
