@@ -47,7 +47,7 @@ ListMenu = function(menu)
     for i = 1, #VehiclesBDD, 1 do
         local vehicleName = GetDisplayNameFromVehicleModel(VehiclesBDD[i].vehicle.model)
             
-        local vehicleitem = NativeUI.CreateItem(vehicleName, "")
+        local vehicleitem = NativeUI.CreateItem(GetLabelText(vehicleName), "")
 
          listvehicle.SubMenu:AddItem(vehicleitem)
 
