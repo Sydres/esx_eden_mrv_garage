@@ -6,7 +6,7 @@ _garagepool:Add(listmenu)
 parkmenu = NativeUI.CreateMenu("", _U"storing_vehicle", 5, 150, "shopui_title_supermod", "shopui_title_supermod")
 _garagepool:Add(parkmenu)
 
-poundmenu = NativeUI.CreateMenu("", _U"inpound".. ": ~g~"..Config.Price.."$", 5, 150, "shopui_title_supermod", "shopui_title_supermod")
+poundmenu = NativeUI.CreateMenu("", _U"pound".. ": ~g~"..Config.Price.."$", 5, 150, "shopui_title_supermod", "shopui_title_supermod")
 _garagepool:Add(poundmenu)
 
 RefreshMenu = function()
@@ -98,7 +98,7 @@ PoundMenu = function(menu)
     
     poundmenu:Clear()
 
-    local poundmenu = _garagepool:AddSubMenu(menu, _U"inpound_vehicles", "", 5, 150, "shopui_title_supermod", "shopui_title_supermod")
+    local poundmenu = _garagepool:AddSubMenu(menu, _U"pound_vehicles", "", 5, 150, "shopui_title_supermod", "shopui_title_supermod")
 
     for i = 1, #PoundVehiclesBDD, 1 do
         local vehicleName = GetDisplayNameFromVehicleModel(PoundVehiclesBDD[i].model)
