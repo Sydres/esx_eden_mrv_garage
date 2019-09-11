@@ -56,7 +56,7 @@ ESX.RegisterServerCallback('esx_eden_mrv_garage:getPoundVehicles', function(sour
     local xPlayer = ESX.GetPlayerFromId(_source)
     local vehicules = {}
 
-    MySQL.Async.fetchAll('SELECT * FROM owned_vehicles WHERE owner = @identifier AND inpound = true AND stored = false', {
+    MySQL.Async.fetchAll('SELECT * FROM owned_vehicles WHERE owner = @identifier AND impound = true AND stored = false', {
         ['@identifier'] = xPlayer.getIdentifier()
     }, function(data)
 
@@ -86,14 +86,14 @@ AddEventHandler('esx_eden_mrv_garage:modifyStored', function(plate, stored)
     })
 end)
 
-RegisterServerEvent('esx_eden_mrv_garage:modifyInPound')
-AddEventHandler('esx_eden_mrv_garage:modifyInPound', function(plate, inpound)
+RegisterServerEvent('esx_eden_mrv_garage:modifyImPound')
+AddEventHandler('esx_eden_mrv_garage:modifyImPound', function(plate, impound)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    local inpound = inpound
+    local impound = impound
 
-    MySQL.Sync.execute('UPDATE owned_vehicles SET inpound = @inpound WHERE plate = @plate', {
-        ['@inpound'] = inpound,
+    MySQL.Sync.execute('UPDATE owned_vehicles SET impound = @impound WHERE plate = @plate', {
+        ['@impound'] = impound,
         ['@plate'] = plate
     })
 end)
@@ -115,7 +115,7 @@ end)
 
 -- Return all vehicles to garage (stored update) on server restart
 AddEventHandler('onMySQLReady', function()
-    MySQL.Sync.execute('UPDATE owned_vehicles SET inpound=true WHERE stored=false', {})
+    MySQL.Sync.execute('UPDATE owned_vehicles SET impound=true WHERE stored=false', {})
 end)
 
 -- End vehicle return
