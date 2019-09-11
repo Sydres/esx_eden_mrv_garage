@@ -10,7 +10,6 @@
 # Requirements
 
 - [es_extended](https://github.com/ESX-Org/es_extended)
-- [esx_vehicleshop](https://github.com/ESX-Org/esx_vehicleshop)
 
 # In config.lua, you can:
 
