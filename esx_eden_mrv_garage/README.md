@@ -1,5 +1,5 @@
-https://imgur.com/Dv7wdbd
-https://imgur.com/CHH7IoE
+![preview 1](https://imgur.com/Dv7wdbd.png)
+![preview 2](https://imgur.com/CHH7IoE.png)
 
 # As I no longer use esx, I decided to publish my modification of esx_eden_garage in NativeUILua_Reloaded.
 
